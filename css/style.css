@@ -1,0 +1,312 @@
+/* Main body elements common to all pages */
+
+body {
+	background-image: url('../img/wallpaper.jpg');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-attachment: fixed;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+}
+
+p {
+	margin: 20px 0px;
+}
+
+h1 {
+	padding-bottom: 2vh;
+}
+
+.actual-body {
+	padding-top: 1%;
+	padding-bottom: 1%;
+	color: #ffffff;
+	width: 80%;
+	margin: auto;
+}
+
+footer {
+	margin-top: 2vh;
+}
+
+/* Flexbox Navbar, common to all pages */
+
+.navbar-black {
+	background-color: #000000;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px -9px 5px 8px #fff;
+	color: #ffffff;
+	opacity: 0.8;
+}
+
+.navbar-link {
+	padding: 8px;
+	/* text-align: center; */
+	padding-left: 5vw;
+	margin-left: 3px;
+	width: 100%;
+}
+
+.navbar-link:hover {
+	background-color: green;
+}
+
+.navbar-items-right .navbar-link:hover {
+	width: 100vw;
+}
+
+.navbar-items {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	display: none;
+}
+
+.navbar-items-right {
+	margin-left: 0;
+	margin-right: 2em;
+}
+
+.navbar-link-brand {
+	font-family: 'Charmonman', cursive;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding-top: 2vh;
+}
+
+.navbar-link-brand:hover {
+	color: #ccc;
+	background-color: #000000;
+}
+
+.navbar-link-toggle {
+	width: 2em;
+	align-self: flex-end;
+	display: initial;
+	position: absolute;
+	cursor: pointer;
+	padding-top: 2vh;
+}
+
+.navbar-link-toggle:hover {
+	color: #ccc;
+	background-color: #000000;
+}
+
+.navbar-items > a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navbar-items > a:active {
+	color: #fff;
+}
+
+.navbar-items > a:visited {
+	color: #fff;
+}
+
+.navbar-active {
+	background-color: green;
+}
+
+/* Specific styles for the Home page */
+
+.overlay-home {
+	height: 100vh;
+	position: fixed;
+}
+
+.home-heading-text {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 3em;
+}
+
+.home-subheading {
+	margin-top: 5vh;
+}
+
+.home-opening-gif {
+	text-align: right;
+	display: none;
+}
+
+.home-quote {
+	width:60%;
+	margin-top: 5vh;
+	font-family: 'Indie Flower', cursive;
+}
+
+.home-author {
+	text-align: right;
+}
+
+/* Specific styles for the History page */
+
+.history-heading-text {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 3em;
+}
+
+.ancient-chess-image {
+	width: 70%;
+}
+
+/* Specific styles for the Rules page */
+
+.rules-heading-text {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 3em;
+}
+
+/* Specific styles for the Best Players Page */
+
+.players_wrapper {
+	display: block;
+}
+
+.player_div {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	width: 100%;
+}
+
+.players-heading-text {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 3em;
+}
+
+.navbar-toggle-show {
+	display: flex;
+}
+
+@media only screen and (orientation: landscape) {
+
+	/* Home page */
+
+	.home-opening-gif {
+		display: block;
+		margin-top: 5vh;
+		text-align: left;
+	}
+
+	.overlay-home {
+		height: auto;
+		width: 100vw;
+		position: static;
+	}
+
+	/* Players page */
+
+	.players_wrapper {
+		display: grid;
+		grid-template-columns: 45% 45%;
+		/* grid-gap: 5%; */
+		justify-content: center;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	/* Make navbar expand on desktop */
+
+	.navbar-items, .navbar-black {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.navbar-link {
+		width: 8em;
+		padding-left: 0;
+	}
+
+	.navbar-link i {
+		display: block;
+	}
+
+	.navbar-items {
+		align-content: flex-start;
+		text-align: center;
+	}
+
+	.navbar-items-right {
+		margin-left: auto;
+	}
+
+	.navbar-items-right .navbar-link:hover {
+		width: 8em;
+	}
+
+	.navbar-link-toggle {
+		display: none;
+	}
+
+	.home-wrapper {
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+		grid-template-columns: repeat(2, auto);
+		/* grid-gap: 2%; */
+	}
+
+	/* #modalNavbarItem {
+		display: block;
+	} */
+
+	/* Home page  */
+	
+	.home-heading {
+		grid-column: 1 / span 2;
+	}
+
+	.home-opening-gif {
+		display: initial;
+		text-align: right;
+	}
+
+	.overlay-home {
+		height: 100vh;
+	}
+
+	/* #myModal {
+		display: inherit;
+	} */
+
+	.modalChessBoard {
+		width:400px;
+		margin:15px auto 0 auto;
+	}
+
+	/* History page  */
+
+	.ancient-chess-image {
+		width: 50%;
+	}
+
+	/* Players page  */
+
+	.players_wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 30%);
+		/* grid-gap: 5%; */
+		justify-content: center;
+	}
+
+	.player_div:last-child {
+		grid-column: 1 / span 3;
+	}
+
+}

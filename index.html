@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChessPresso</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Charmonman%7cPermanent+Marker%7cRoboto%7cIndie+Flower" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/html5reset-1.6.1.css">
+    <link rel="stylesheet" type="text/css" href="css/chessboard-0.3.0.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="overlay overlay-home">
+        <header>
+            <nav class="navbar-black">
+                <div class="navbar-link navbar-link-brand">
+                    ChessPresso
+                </div>
+                <div class="navbar-link navbar-link-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="navbar-items navbar-items-right">
+                    <div class="navbar-link navbar-active">
+                        <div class="nav-item-text">
+                            <i class="fas fa-home" aria-label="Home"></i>
+                            Home
+                        </div>
+                    </div>
+                    <a href="history.html"><div class="navbar-link">
+                        <div class="nav-item-text">
+                            <i class="fas fa-landmark" aria-label="History"></i>
+                            History
+                        </div>
+                    </div></a>
+                    <a href="rules.html"><div class="navbar-link">
+                        <div class="nav-item-text">
+                            <i class="fas fa-clipboard-list" aria-label="Rules"></i>    
+                            Rules
+                        </div>
+                    </div></a>
+                    <a href = "players.html"><div class="navbar-link">    
+                        <div class="nav-item-text">
+                            <i class="fas fa-users" aria-label="Best Players"></i>
+                            Top Players
+                        </div>
+                    </div></a>
+                    <a href = "#" id="modalNavbarItem"><div class="navbar-link" data-toggle="modal" data-target="#myModal">    
+                        <div class="nav-item-text">
+                            <i class="fas fa-play" aria-label="Play Chess"></i>
+                            Play Now!
+                        </div>
+                    </div></a>
+                </div>
+            </nav>
+        </header>
+        <div class="actual-body">
+            <main>
+                <div class="home-wrapper">
+                    <div class="home-heading">
+                        <h1 class="home-heading-text">Welcome to ChessPresso!</h1>
+                    </div>
+                    <div class="home-subheading">Your daily early morning shot of Chess!</div>
+                    <div class="home-opening-gif">
+                        <img src="img/opening.gif" alt="An animated image showing a famous chess game"/>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="home-quote">
+                    <div class="home-quote-text">"Avoid the crowd. Do your own thinking independently. Be the chess player, not the chess piece."</div>
+                    <div class="home-author">- Ralph Charell</div>
+                </div>
+            </footer>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                        </div>
+                        <div class="modal-body">
+                            <div role="tabpanel">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#playerTab" aria-controls="playerTab" role="tab" data-toggle="tab">Against Player</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#computerTab" aria-controls="computerTab" role="tab" data-toggle="tab">Against Computer</a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="playerTab">
+                                        <div id="playerBoard" class="modalChessBoard"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="computerTab">
+                                        <div id="computerBoard" class="modalChessBoard"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary save">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/chess.min.js"></script>
+    <script src="js/chessboard-0.3.0.min.js"></script>
+    <script src="js/playerBoard.js"></script>
+    <script src="js/computerBoard.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
