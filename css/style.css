@@ -150,6 +150,10 @@ a.skip-main:focus, a.skip-main:active {
 
 /* Specific styles for the Home page */
 
+.home-toggle {
+	padding-right: 5vh
+}
+
 .overlay-home {
 	height: auto;
 }
@@ -248,6 +252,10 @@ a.skip-main:focus, a.skip-main:active {
 @media only screen and (orientation: landscape) {
 
 	/* Home page */
+
+	.home-toggle {
+		padding-right: 9vh;
+	}
 
 	.home-opening-gif {
 		display: block;
