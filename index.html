@@ -14,6 +14,7 @@
 <body>
     <div class="overlay overlay-home">
         <header>
+            <a class="skip-main" href="#main">Skip to main content</a>
             <nav class="navbar-black">
                 <div class="navbar-link navbar-link-brand">
                     ChessPresso
@@ -46,24 +47,38 @@
                             Top Players
                         </div>
                     </div></a>
-                    <a href = "#" id="modalNavbarItem"><div class="navbar-link" data-toggle="modal" data-target="#myModal">    
-                        <div class="nav-item-text">
-                            <i class="fas fa-play" aria-label="Play Chess"></i>
-                            Play Now!
-                        </div>
-                    </div></a>
                 </div>
             </nav>
         </header>
-        <div class="actual-body">
+        <div class="actual-body" id="main">
             <main>
                 <div class="home-wrapper">
                     <div class="home-heading">
                         <h1 class="home-heading-text">Welcome to ChessPresso!</h1>
                     </div>
-                    <div class="home-subheading">Your daily early morning shot of Chess!</div>
-                    <div class="home-opening-gif">
+                    <div class="home-subheading">
+                        <p>Your daily early morning shot of Chess!</p>
+                        <p>
+                            Chesspresso is your basic begginner-friendly chess website. The primary goal of this website
+                            is to get the non-players inspired and excited towards the game of chess as chess is beneficial
+                            to everyone.
+                        </p>
+                        <p>
+                            You can use this website to learn about the history and origin of chess, learn about the rules
+                            of chess and how to play a game. You can also play a game with your friend or against the 
+                            computer to get comfortable with the rules and practice the game. Since the target users are
+                            beginners, the level of difficulty for the computer is pretty low, and anyone with a basic
+                            knowledge of the rules should be able to beat the computer pretty comfortably.
+                        </p>
+                        <p>
+                            Finally, this website can also be used to view the all-time top players of the game, and their
+                            FIDE ratings, so as to give new players an idea of how high they can achieve. For beginner players,
+                            the approximate FIDE rating would be 500.
+                        </p>
+                    </div>
+                    <div class="home-opening-gif container">
                         <img src="img/opening.gif" alt="An animated image showing a famous chess game"/>
+                        <button class="btn" data-toggle="modal" data-target="#myModal" tabindex="-1">Play Now!</button>
                     </div>
                 </div>
             </main>
@@ -73,7 +88,8 @@
                     <div class="home-author">- Ralph Charell</div>
                 </div>
             </footer>
-            <!-- Modal -->
+
+            <!-- Chess Board Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -81,7 +97,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
 
                             </button>
-                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            <h4 class="modal-title" id="myModalLabel">Choose whether to play against Human or Computer</h4>
 
                         </div>
                         <div class="modal-body">
@@ -89,7 +105,7 @@
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="active">
-                                        <a href="#playerTab" aria-controls="playerTab" role="tab" data-toggle="tab">Against Player</a>
+                                        <a href="#playerTab" aria-controls="playerTab" role="tab" data-toggle="tab">Against Human</a>
                                     </li>
                                     <li role="presentation">
                                         <a href="#computerTab" aria-controls="computerTab" role="tab" data-toggle="tab">Against Computer</a>
@@ -99,9 +115,11 @@
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="playerTab">
                                         <div id="playerBoard" class="modalChessBoard"></div>
+                                        <div id="playerBoardStatus">Drag a white piece to start a new game</div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="computerTab">
                                         <div id="computerBoard" class="modalChessBoard"></div>
+                                        <div id="computerBoardStatus">Drag a white piece to start a new game</div>
                                     </div>
                                 </div>
                             </div>
@@ -122,5 +140,6 @@
     <script src="js/playerBoard.js"></script>
     <script src="js/computerBoard.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

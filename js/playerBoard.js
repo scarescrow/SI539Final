@@ -62,4 +62,6 @@ var updateStatusPlayer = function() {
       playerStatus += ', ' + moveColor + ' is in check';
     }
   }
+
+  $('#playerBoardStatus').text(playerStatus);
 };

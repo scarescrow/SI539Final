@@ -23,6 +23,7 @@ var makeRandomMove = function() {
   var randomIndex = Math.floor(Math.random() * possibleMoves.length);
   game.move(possibleMoves[randomIndex]);
   computerBoard.position(game.fen());
+  updateStatusComputer();
 };
 
 var onDropComputer = function(source, target) {
@@ -38,7 +39,40 @@ var onDropComputer = function(source, target) {
 
   // make random legal move for black
   window.setTimeout(makeRandomMove, 250);
+  updateStatusComputer();
 };
+
+// Update the status
+var updateStatusComputer = function() {
+    var computerStatus = '';
+  
+    var moveColor = 'White';
+    if (game.turn() === 'b') {
+      moveColor = 'Black';
+    }
+  
+    // checkmate?
+    if (game.in_checkmate() === true) {
+      computerStatus = 'Game over, ' + moveColor + ' is in checkmate.';
+    }
+  
+    // draw?
+    else if (game.in_draw() === true) {
+      computerStatus = 'Game over, drawn position';
+    }
+  
+    // game still on
+    else {
+      computerStatus = moveColor + ' to move';
+  
+      // check?
+      if (game.in_check() === true) {
+        computerStatus += ', ' + moveColor + ' is in check';
+      }
+    }
+  
+    $('#computerBoardStatus').text(computerStatus);
+  };
 
 // update the board position after the piece snap
 // for castling, en passant, pawn promotion

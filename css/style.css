@@ -38,6 +38,33 @@ footer {
 	margin-top: 2vh;
 }
 
+/* Skip to main, common to all pages */
+a.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+a.skip-main:focus, a.skip-main:active {
+    color: #fff;
+    background-color:#000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    border:4px solid yellow;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+
 /* Flexbox Navbar, common to all pages */
 
 .navbar-black {
@@ -152,6 +179,10 @@ footer {
 	text-align: right;
 }
 
+.container .btn {
+	display:none;
+}
+
 /* Specific styles for the History page */
 
 .history-heading-text {
@@ -258,7 +289,7 @@ footer {
 	.home-wrapper {
 		display: grid;
 		grid-template-rows: repeat(3, auto);
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: 40% 60%;
 		/* grid-gap: 2%; */
 	}
 
@@ -274,20 +305,63 @@ footer {
 
 	.home-opening-gif {
 		display: initial;
-		text-align: right;
+		margin: auto auto;
 	}
 
 	.overlay-home {
-		height: 100vh;
+		height: 120vh;
+	}
+
+	/* This code is for button on image */
+	/* Make the image responsive */
+	.container {
+		position: relative;
+		width: 60%;
+	}
+
+	.container img {
+		width: 100%;
+		height: auto;
+	}
+  
+	/* Style the button and place it in the middle of the container/image */
+	.container .btn {
+		position: absolute;
+		display: inline;
+		top: 50%;
+		left: 50%;
+		opacity: 0.8;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+	}
+	
+	.container .btn:hover {
+		background-color: black;
 	}
 
 	/* #myModal {
 		display: inherit;
 	} */
+	
+	.modal {
+		color: #000;
+	}
 
 	.modalChessBoard {
 		width:400px;
 		margin:15px auto 0 auto;
+	}
+
+	#playerBoardStatus, #computerBoardStatus {
+		margin-top: 10px;
+		text-align: center;
 	}
 
 	/* History page  */
@@ -309,4 +383,50 @@ footer {
 		grid-column: 1 / span 3;
 	}
 
+	/* .player_div {
+		width: 120px;
+		height: 120px;
+		z-index : 1;
+	} */
+	
+	.card {
+		width: 120px;
+		height: 120px;
+		margin: 0 auto;
+		-webkit-transform-style: preserve-3d;
+		-webkit-transition: all 1.0s linear;
+		transform-style: preserve-3d;
+		transition: all 1.0s linear;
+	}
+
+	.player_div.active .card {
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+	.face {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+	}
+
+	.face.back {
+		display: block;
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		box-sizing: border-box;
+		color: #000;
+		text-align: center;
+		background-color: #fff;
+	}
+
+	.face_name {
+		margin-top: 45%;
+	}
+
+	.player_desc {
+		visibility: hidden;
+	}
 }
