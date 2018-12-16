@@ -36,7 +36,13 @@ h1 {
 
 footer {
 	margin-top: 2vh;
+	font-size: 12px;
 }
+
+a.footer:visited {
+	color: #fff
+}
+
 
 /* Skip to main, common to all pages */
 a.skip-main {
