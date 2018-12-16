@@ -16,3 +16,12 @@ function topFunction() {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
     return false; 
 }
+
+$(function() {
+    $('#scrollButton').focusin(function() {
+        $(this).css('border', '3px solid #fff');
+    });
+    $('#scrollButton').focusout(function() {
+        $(this).css('border', 'none');
+    });
+})

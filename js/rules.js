@@ -20,4 +20,16 @@ function topFunction() {
 $(function() {
     // Implement flip
     $('.piece-card').flip();
+    $('.piece-card').focusin(function() {
+        $(this).flip(true);
+    });
+    $('.piece-card').focusout(function() {
+        $(this).flip(false);
+    });
+    $('#scrollButton').focusin(function() {
+        $(this).css('border', '3px solid #fff');
+    });
+    $('#scrollButton').focusout(function() {
+        $(this).css('border', 'none');
+    });
 });

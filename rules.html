@@ -51,14 +51,13 @@
         </header>
         <div class="actual-body" id="main">
             <main>
-                <button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
                 <h1 class="rules-heading-text">How to Play?</h1>
                 <p>"Chess is a two-player strategy board game played on a chessboard, a checkered gameboard with 64 squares arranged in an 8×8 grid. The game is played by millions of people worldwide. Chess is believed to have originated in India sometime before the 7th century. The game was derived from the Indian game chaturanga, which is also the likely ancestor of the Eastern strategy games xiangqi, janggi, and shogi. Chess reached Europe by the 9th century, due to the Umayyad conquest of Hispania. The pieces assumed their current powers in Spain in the late 15th century; the rules were standardized in the 19th century.
                 Play does not involve hidden information. Each player begins with 16 pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. Each of the six piece types moves differently, with the most powerful being the queen and the least powerful the pawn. The objective is to checkmate the opponent's king by placing it under an inescapable threat of capture. To this end, a player's pieces are used to attack and capture the opponent's pieces, while supporting each other. During the game, play typically involves making exchanges of one piece for an opponent's similar piece, but also finding and engineering opportunities to trade one piece for two, or to get a better position. In addition to checkmate, the game can be won by voluntary resignation, and there are also several ways a game can end in a draw."</p>
                 <img src="img/rules/initial-board.jpg" alt="Picture of an initial chess board">
                 <p>Click on any of these icons to reveal valid moves for those pieces</p>
                 <div class="chess-moves-grid">
-                    <div class="piece-card">
+                    <div class="piece-card" tabindex="0">
                         <div class="front"> 
                             <i class="fas fa-chess-pawn" aria-label="Pawn Piece"></i>
                             <p>Pawn</p>
@@ -67,7 +66,7 @@
                             <img src="img/rules/pawn-moves.png" alt="Image depicting pawn moves">
                         </div> 
                     </div>
-                    <div class="piece-card">
+                    <div class="piece-card" tabindex="0">
                         <div class="front"> 
                             <i class="fas fa-chess-bishop" aria-label="Bishop Piece"></i>
                             <p>Bishop</p>
@@ -76,7 +75,7 @@
                             <img src="img/rules/bishop-moves.png" alt="Image depicting bishop moves">
                         </div> 
                     </div>
-                    <div class="piece-card">
+                    <div class="piece-card" tabindex="0">
                         <div class="front"> 
                             <i class="fas fa-chess-knight" aria-label="Knight Piece"></i>
                             <p>Knight</p>
@@ -85,7 +84,7 @@
                             <img src="img/rules/knight-moves.png" alt="Image depicting knight moves">
                         </div> 
                     </div>
-                    <div class="piece-card">
+                    <div class="piece-card" tabindex="0">
                         <div class="front"> 
                             <i class="fas fa-chess-rook" aria-label="Rook Piece"></i>
                             <p>Rook</p>
@@ -94,7 +93,7 @@
                             <img src="img/rules/rook-moves.png" alt="Image depicting rook moves">
                         </div> 
                     </div>
-                    <div class="piece-card">
+                    <div class="piece-card" tabindex="0">
                         <div class="front"> 
                             <i class="fas fa-chess-queen" aria-label="Queen Piece"></i>
                             <p>Queen</p>
@@ -103,7 +102,7 @@
                             <img src="img/rules/queen-moves.jpg" alt="Image depicting queen moves">
                         </div> 
                     </div>
-                    <div class="piece-card">
+                    <div class="piece-card" tabindex="0">
                         <div class="front"> 
                             <i class="fas fa-chess-king" aria-label="King Piece"></i>
                             <p>King</p>
@@ -145,6 +144,7 @@
 
                 <h1>En Passant</h1>
                 <p>When a pawn advances two squares from its starting position and there is an opponent's pawn on an adjacent file next to its destination square, then the opponent's pawn can capture it en passant (in passing), and move to the square the pawn passed over. This can only be done on the very next move, otherwise the right to do so is forfeit. </p>
+                <button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
             </main>
             <footer>
             Cited from Wikipedia
