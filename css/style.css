@@ -236,7 +236,7 @@ a.skip-main:focus, a.skip-main:active {
 .piece-card {
 	text-align: center;
 	color: white;
-	padding-top: 10%;
+	padding-top: 1%;
 	cursor: pointer;
 }
 
@@ -245,7 +245,7 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 .piece-card .front {
-	padding-top: 35%;
+	padding-top: 15%;
 }
 
 /* Specific styles for the Best Players Page */
@@ -301,7 +301,7 @@ a.skip-main:focus, a.skip-main:active {
 
 	.chess-moves-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 33%);
+		grid-template-columns: repeat(2, 48%);
 		justify-content: center;
 	}
 
@@ -383,6 +383,13 @@ a.skip-main:focus, a.skip-main:active {
 		right: 30px;
 	}
 
+	/* Rules page */
+	.chess-moves-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 33%);
+		justify-content: center;
+	}
+
 	/* This code is for button on image */
 	/* Make the image responsive */
 	.container {
@@ -439,14 +446,6 @@ a.skip-main:focus, a.skip-main:active {
 
 	.ancient-chess-image {
 		width: 50%;
-	}
-
-	/* Rules page */
-
-	.chess-moves-grid {
-		display: grid;
-		grid-template-columns: repeat(6, 15%);
-		justify-content: center;
 	}
 
 	/* Players page  */

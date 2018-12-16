@@ -20,11 +20,18 @@ function topFunction() {
 $(function() {
     // Implement flip
     $('.piece-card').flip();
+    $('.piece-card').keypress(function(e) {
+        var currentEl = $(this);
+        if(e.which == 13) {
+            console.log(currentEl);
+            $(currentEl).flip('toggle');
+        }
+    });
     $('.piece-card').focusin(function() {
-        $(this).flip(true);
+        $(this).css('border', '3px solid #fff');
     });
     $('.piece-card').focusout(function() {
-        $(this).flip(false);
+        $(this).css('border', 'none');
     });
     $('#scrollButton').focusin(function() {
         $(this).css('border', '3px solid #fff');
