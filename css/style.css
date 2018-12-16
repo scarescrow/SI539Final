@@ -110,6 +110,7 @@ a.skip-main:focus, a.skip-main:active {
 	font-weight: bold;
 	font-size: 1.5em;
 	padding-top: 2vh;
+	background-color: black;
 }
 
 .navbar-link-brand:hover {
@@ -226,6 +227,26 @@ a.skip-main:focus, a.skip-main:active {
 	font-size: 3em;
 }
 
+.chess-moves-grid {
+	display: grid;
+	grid-template-columns: repeat(1, 90%);
+	justify-content: center;
+}
+
+.piece-card {
+	text-align: center;
+	color: white;
+	padding-top: 10%;
+}
+
+.piece-card i {
+	font-size: 75px;
+}
+
+.piece-card .front {
+	padding-top: 35%;
+}
+
 /* Specific styles for the Best Players Page */
 
 .players_wrapper {
@@ -273,6 +294,14 @@ a.skip-main:focus, a.skip-main:active {
 
 	#scrollButton {
 		right: 70px;
+	}
+
+	/* Rules page */
+
+	.chess-moves-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 33%);
+		justify-content: center;
 	}
 
 	/* Players page */
@@ -409,6 +438,14 @@ a.skip-main:focus, a.skip-main:active {
 
 	.ancient-chess-image {
 		width: 50%;
+	}
+
+	/* Rules page */
+
+	.chess-moves-grid {
+		display: grid;
+		grid-template-columns: repeat(6, 15%);
+		justify-content: center;
 	}
 
 	/* Players page  */
