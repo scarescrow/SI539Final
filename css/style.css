@@ -237,6 +237,7 @@ a.skip-main:focus, a.skip-main:active {
 	text-align: center;
 	color: white;
 	padding-top: 10%;
+	cursor: pointer;
 }
 
 .piece-card i {
